@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SECTION 1: OPENING -->
+  <section class="section active" id="sec1">
+    <p>
+      This is the last thing I want to say.<br><br>
+      Please continue only if you feel comfortable.
+    </p>
+    <button onclick="nextSection()">Tap to continue</button>
+  </section>
+
+  <!-- SECTION 2: PHOTO 1 -->
+  <section class="section" id="sec2">
+    <img src="images/pic1.jpg" alt="memory">
+    <p>This picture feels honest to me. That’s why I kept it.</p>
+    <button onclick="nextSection()">Next</button>
+  </section>
+
+  <!-- SECTION 3: PHOTO 2 -->
+  <section class="section" id="sec3">
+    <img src="images/pic2.jpg" alt="memory">
+    <p>I don’t remember the words here, but I remember the calm.</p>
+    <button onclick="nextSection()">Next</button>
+  </section>
+
+  <!-- SECTION 4: APOLOGY -->
+  <section class="section" id="sec4">
+    <p>
+      I crossed boundaries without realizing it at the time.<br><br>
+      I spoke when silence would have been kinder.<br><br>
+      I’m sorry for the discomfort I caused you.
+    </p>
+    <button onclick="nextSection()">Continue</button>
+  </section>
+
+  <!-- SECTION 5: FEELINGS -->
+  <section class="section" id="sec5">
+    <p>
+      My feelings were real.<br><br>
+      I’m not sharing this to change anything—<br>
+      only because honesty felt important.
+    </p>
+    <button onclick="nextSection()">Next</button>
+  </section>
+
+  <!-- SECTION 6: LETTING GO -->
+  <section class="section" id="sec6">
+    <p>
+      I’m choosing to step away now.<br><br>
+      Not because it’s easy,<br>
+      but because it’s the right thing to do.
+    </p>
+    <button onclick="nextSection()">Continue</button>
+  </section>
+
+  <!-- SECTION 7: PRE-BIRTHDAY WISH -->
+  <section class="section" id="sec7">
+    <p class="tap">Tap to reveal</p>
+    <img src="images/final.jpg" class="hidden" id="finalImg" alt="final">
+    <p class="hidden" id="finalText">
+      I know your birthday is still a little far.<br><br>
+      I just wanted to wish you early—<br>
+      because I won’t be around then.<br><br>
+      Happy Birthday 🤍
+    </p>
+    <button onclick="revealFinal()">One last thing</button>
+  </section>
+
+  <!-- SECTION 8: VIDEO -->
+  <section class="section" id="sec8">
+    <p>
+      I made this quietly.<br><br>
+      You don’t have to watch it.
+    </p>
+    <button onclick="showVideo()">Tap if you want to watch</button>
+
+    <div id="videoBox" class="hidden">
+      <video controls>
+        <source src="video/song.mp4" type="video/mp4">
+      </video>
+      <p class="end">This is where I stop.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

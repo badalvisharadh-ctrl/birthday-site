@@ -1,53 +1,69 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  margin: 0;
-  background: linear-gradient(135deg, #fde2e4, #eae4f7);
-  color: #333;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff512f, #dd2476, #7f00ff, #e100ff);
+  background-size: 400% 400%;
+  animation: bg 15s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+@keyframes bg {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .section {
   min-height: 100vh;
-  padding: 40px;
   display: none;
-  flex-direction: column;
+  padding: 40px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  transition: opacity 0.6s ease;
+  flex-direction: column;
 }
 
-.section.active {
+.section.show {
   display: flex;
 }
 
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
 p {
-  max-width: 600px;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 button {
   margin-top: 30px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   font-size: 16px;
   background: transparent;
-  border: 1px solid #555;
+  color: white;
+  border: 2px solid white;
   cursor: pointer;
 }
 
 button:hover {
-  background: #555;
-  color: white;
-}
-
-img {
-  max-width: 280px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  background: white;
+  color: black;
 }
 
 .hidden {
@@ -55,8 +71,8 @@ img {
 }
 
 .tap {
-  font-style: italic;
   opacity: 0.7;
+  margin-bottom: 20px;
 }
 
 video {
@@ -66,6 +82,16 @@ video {
 
 .end {
   margin-top: 15px;
-  font-size: 14px;
   opacity: 0.7;
 }
+
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+

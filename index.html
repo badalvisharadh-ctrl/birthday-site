@@ -7,88 +7,87 @@
 </head>
 <body>
 
-<section class="section active" id="sec1">
-  <p>
-    This is the last thing I want to say.<br><br>
-    Please continue only if you feel comfortable.
-  </p>
-  <button onclick="nextSection()">Tap to continue</button>
-</section>
+<!-- Background Music -->
+<audio id="bgMusic" src="video/bg.mp3" loop></audio>
 
-<!-- PHOTO SECTIONS 1–9 -->
-<section class="section" id="sec2">
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<div class="section show" id="s1">
+  <h1>This is the last thing I want to say.</h1>
+  <p>Please continue only if you feel comfortable.</p>
+  <button onclick="go('s1','s2')">Tap to continue</button>
+</div>
+
+<div class="section" id="s2">
   <img src="images/pic1.jpg">
-  <p>This moment always felt calm to me.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>I didn’t think much of this moment back then.<br>But it stayed.</p>
+  <button onclick="go('s2','s3')">Next</button>
+</div>
 
-<section class="section" id="sec3">
+<div class="section" id="s3">
   <img src="images/pic2.jpg">
-  <p>Some smiles don’t try — they just happen.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>This smile felt effortless.<br>That’s why I remember it.</p>
+  <button onclick="go('s3','s4')">Next</button>
+</div>
 
-<section class="section" id="sec4">
+<div class="section" id="s4">
   <img src="images/pic3.jpg">
-  <p>I remember this without remembering why.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>Some memories don’t ask permission to stay.</p>
+  <button onclick="go('s4','s5')">Next</button>
+</div>
 
-<section class="section" id="sec5">
+<div class="section" id="s5">
   <img src="images/pic4.jpg">
-  <p>This picture feels honest.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>I didn’t know this would mean something later.</p>
+  <button onclick="go('s5','s6')">Next</button>
+</div>
 
-<section class="section" id="sec6">
+<div class="section" id="s6">
   <img src="images/pic5.jpg">
-  <p>Some moments stay quietly.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>This moment felt simple.<br>That’s why it mattered.</p>
+  <button onclick="go('s6','s7')">Next</button>
+</div>
 
-<section class="section" id="sec7">
+<div class="section" id="s7">
   <img src="images/pic6.jpg">
-  <p>This one always made me pause.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>I look at this and feel quiet.</p>
+  <button onclick="go('s7','s8')">Next</button>
+</div>
 
-<section class="section" id="sec8">
+<div class="section" id="s8">
   <img src="images/pic7.jpg">
-  <p>There’s peace in this memory.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>This stayed longer than I expected.</p>
+  <button onclick="go('s8','s9')">Next</button>
+</div>
 
-<section class="section" id="sec9">
+<div class="section" id="s9">
   <img src="images/pic8.jpg">
-  <p>I didn’t realize how meaningful this was then.</p>
-  <button onclick="nextSection()">Next</button>
-</section>
+  <p>I didn’t realise I was holding onto this.</p>
+  <button onclick="go('s9','s10')">Next</button>
+</div>
 
-<section class="section" id="sec10">
+<div class="section" id="s10">
   <img src="images/pic9.jpg">
-  <p>This stayed longer than expected.</p>
-  <button onclick="nextSection()">Continue</button>
-</section>
+  <p>This was never about asking for anything.</p>
+  <button onclick="go('s10','s11')">Continue</button>
+</div>
 
-<!-- FINAL SPECIAL IMAGE (10th) -->
-<section class="section" id="sec11">
+<!-- FINAL IMAGE -->
+<div class="section" id="s11">
   <p class="tap">Tap to reveal</p>
   <img src="images/pic10.jpg" class="hidden" id="finalImg">
-  <p class="hidden" id="finalText">
+  <p class="hidden" id="wish">
     I know your birthday is still a little far.<br><br>
-    I just wanted to wish you early —<br>
+    I just wanted to wish you early,<br>
     because I won’t be around then.<br><br>
     Happy Birthday 🤍
   </p>
-  <button onclick="revealFinal()">One last thing</button>
-</section>
+  <button onclick="reveal()">One last thing</button>
+</div>
 
 <!-- VIDEO -->
-<section class="section" id="sec12">
-  <p>
-    I made this quietly.<br><br>
-    You don’t have to watch it.
-  </p>
+<div class="section" id="s12">
+  <p>I made this quietly.<br>You don’t have to watch it.</p>
   <button onclick="showVideo()">Tap if you want to watch</button>
 
   <div id="videoBox" class="hidden">
@@ -97,10 +96,11 @@
     </video>
     <p class="end">This is where I stop.</p>
   </div>
-</section>
+</div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 

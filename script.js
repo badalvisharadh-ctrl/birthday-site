@@ -15,3 +15,4 @@ function revealFinal() {
 function showVideo() {
   document.getElementById("videoBox").classList.remove("hidden");
 }
+
